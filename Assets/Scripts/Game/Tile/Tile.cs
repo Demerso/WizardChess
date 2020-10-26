@@ -10,11 +10,11 @@ public class Tile : MonoBehaviour
     private bool _isActive;
     
     private MeshRenderer _renderer;
-
-    private void Start()
+    
+    private void Awake()
     {
         _renderer = GetComponent<MeshRenderer>();
-        
+        SetActive(false);
     }
 
     public void SetActive(bool active)
