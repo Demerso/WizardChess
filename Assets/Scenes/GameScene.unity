@@ -164,6 +164,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -211,6 +219,10 @@ PrefabInstance:
     - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_Name
       value: White Tile (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
@@ -388,6 +400,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -435,6 +455,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
@@ -582,6 +606,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -630,6 +662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &158440418 stripped
@@ -644,6 +680,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -691,6 +735,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
@@ -801,6 +849,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -848,6 +904,10 @@ PrefabInstance:
     - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_Name
       value: White Tile (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
@@ -959,6 +1019,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -1007,6 +1075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &336277875 stripped
@@ -1021,6 +1093,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -1069,6 +1149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &380256545 stripped
@@ -1083,6 +1167,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -1131,6 +1223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &394137907 stripped
@@ -1145,6 +1241,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -1193,6 +1297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &407973197 stripped
@@ -1207,6 +1315,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -1255,6 +1371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &427302739 stripped
@@ -1269,6 +1389,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -1317,6 +1445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &435057975 stripped
@@ -1331,6 +1463,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -1379,6 +1519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &511438603 stripped
@@ -1393,6 +1537,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -1441,6 +1593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &528676520 stripped
@@ -1455,6 +1611,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -1503,6 +1667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &564885001 stripped
@@ -1517,6 +1685,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -1565,6 +1741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &596531203 stripped
@@ -1579,6 +1759,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -1627,6 +1815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &613766576 stripped
@@ -1641,6 +1833,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -1689,6 +1889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &699475418 stripped
@@ -1703,6 +1907,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -1751,6 +1963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &704570116 stripped
@@ -1765,6 +1981,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -1813,6 +2037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &718889249 stripped
@@ -1827,6 +2055,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -1875,6 +2111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &722828030 stripped
@@ -1889,6 +2129,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -1937,6 +2185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &760697768 stripped
@@ -1951,6 +2203,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -1999,6 +2259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &796628251 stripped
@@ -2013,6 +2277,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -2060,6 +2332,10 @@ PrefabInstance:
     - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_Name
       value: White Tile (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
@@ -2156,7 +2432,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 10, z: 8, w: -11}
+  m_BoundingSphereOverride: {x: 5.3e-43, y: 1.39e-43, z: 0, w: -2.0379353}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2167,6 +2443,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -2214,6 +2498,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
@@ -2310,7 +2598,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.75508e-40, w: -7.61e-43}
+  m_BoundingSphereOverride: {x: 0, y: 4.9e-44, z: 1.75e-42, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2321,6 +2609,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -2369,6 +2665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &949187328 stripped
@@ -2383,6 +2683,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -2431,6 +2739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &953249211 stripped
@@ -2445,6 +2757,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -2492,6 +2812,10 @@ PrefabInstance:
     - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_Name
       value: White Tile (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
@@ -2603,6 +2927,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2651,6 +2983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1019856079 stripped
@@ -2665,6 +3001,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -2713,6 +3057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1025830323 stripped
@@ -2727,6 +3075,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -2775,6 +3131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1027757867 stripped
@@ -2789,6 +3149,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -2837,6 +3205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1113371868 stripped
@@ -2851,6 +3223,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -2898,6 +3278,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
@@ -3124,7 +3508,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.1603e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 7.035e-42, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3135,6 +3519,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -3183,6 +3575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1292819518 stripped
@@ -3197,6 +3593,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -3245,6 +3649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1294310423 stripped
@@ -3259,6 +3667,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -3307,6 +3723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1294641049 stripped
@@ -3321,6 +3741,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -3368,6 +3796,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
@@ -3477,6 +3909,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -3525,6 +3965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1315473879 stripped
@@ -3539,6 +3983,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -3587,6 +4039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1367054336 stripped
@@ -3601,6 +4057,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -3649,6 +4113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1402448513 stripped
@@ -3663,6 +4131,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -3711,6 +4187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1434034172 stripped
@@ -3725,6 +4205,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -3773,6 +4261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1605988512 stripped
@@ -3787,6 +4279,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -3835,6 +4335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1622019634 stripped
@@ -3849,6 +4353,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -3897,6 +4409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1631129784 stripped
@@ -3911,6 +4427,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -3959,6 +4483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1677688514 stripped
@@ -3973,6 +4501,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -4021,6 +4557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1684569625 stripped
@@ -4035,6 +4575,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -4083,6 +4631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1692600450 stripped
@@ -4097,6 +4649,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -4144,6 +4704,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
@@ -4287,6 +4851,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -4335,6 +4907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1739886503 stripped
@@ -4349,6 +4925,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -4396,6 +4980,10 @@ PrefabInstance:
     - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_Name
       value: White Tile (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
@@ -4507,6 +5095,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -4555,6 +5151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1762480924 stripped
@@ -4569,6 +5169,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -4616,6 +5224,10 @@ PrefabInstance:
     - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_Name
       value: White Tile (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
@@ -4807,7 +5419,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.43e-43, y: -8.578165e-10, z: 6.43e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.4e-44, z: 5.338e-42, w: 1.04e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4818,6 +5430,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -4866,6 +5486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1856779956 stripped
@@ -4880,6 +5504,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -4928,6 +5560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1897988527 stripped
@@ -4942,6 +5578,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -4990,6 +5634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1905845705 stripped
@@ -5004,6 +5652,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5052,6 +5708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &1981802588 stripped
@@ -5066,6 +5726,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -5114,6 +5782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1984824308 stripped
@@ -5128,6 +5800,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -5176,6 +5856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &1998508225 stripped
@@ -5190,6 +5874,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5238,6 +5930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &2012717527 stripped
@@ -5252,6 +5948,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5300,6 +6004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Tile (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
 --- !u!4 &2053178257 stripped
@@ -5314,6 +6022,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -5362,6 +6078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &2057582755 stripped
@@ -5376,6 +6096,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21
@@ -5424,6 +6152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &2089673045 stripped
@@ -5438,6 +6170,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -5486,6 +6226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &2121500697 stripped
@@ -5500,6 +6244,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 1503037219292396314, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503037219590446040, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1503037220244804322, guid: c2237b6f73af29740b289f5074b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -5548,6 +6300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White Tile (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503037220244804323, guid: c2237b6f73af29740b289f5074b22738, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2237b6f73af29740b289f5074b22738, type: 3}
 --- !u!4 &2144390319 stripped
@@ -5562,6 +6318,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1312131960}
     m_Modifications:
+    - target: {fileID: 778469859780196411, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861015434718, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 778469861800946884, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -5609,6 +6373,10 @@ PrefabInstance:
     - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
       propertyPath: m_Name
       value: Black Tile (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 778469861800946885, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c62c89961bcb2ac498a4f9b408568f5d, type: 3}
