@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 199372076017340465}
   - component: {fileID: 199372076017340466}
   - component: {fileID: 199372076017340470}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 8
+  m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,4 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoveredMaterial: {fileID: 2100000, guid: 04dc09ec6e8f3f849b338af6775fb7e3, type: 2}
   activeMaterial: {fileID: 2100000, guid: 719f7a7d8618b3d4a942959cac23a68c, type: 2}
-  hiddenMaterial: {fileID: 2100000, guid: 03c10da36b6567943861b05be9b1cb76, type: 2}
+  hiddenMaterial: {fileID: 2100000, guid: 649557b1b2a2178498fdb447e8f962a1, type: 2}
+  piece: {fileID: 0}
+  state: 0

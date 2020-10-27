@@ -4,61 +4,119 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-
-    //THIS BOARD ONLY FOR PLAYER VS AI COULD CHANGE TO PLAYER PLAY
     [SerializeField] private GameObject tilePrefab = null;
+    [SerializeField] private Game game;
 
     private const float TileWidth = 6;
     private const float TileHeight = 0.1f;
+    private const int TileMask = 1 << 8;
+    
     private Vector3 _boardCorner;
-
-    public Camera cam;
-    //public NavMeshAgent agent;
-    public static Tile tileHover;
+    private Camera _cam;
+    
     public Tile selected;
     public Pieces temp;
     private readonly Tile[,] _tiles = new Tile[8, 8];
-    //board x position is horizontal
+    
+    
+    // Board x position is horizontal
     private void Start()
     {
+        _cam = Camera.main;
         _boardCorner = transform.position;
+        InitTiles();
+        InitPieces();
+    }
+
+    private void InitTiles()
+    {
         // Create a tile for every tile on the board
         for (var i = 0; i < 8; i++)
         {
             for (var j = 0; j < 8; j++)
             {
-                var inst = Instantiate(
+                var tile = Instantiate(
                     tilePrefab,
-                     _boardCorner + new Vector3(
+                    _boardCorner + new Vector3(
                         i * TileWidth + TileWidth / 2,
                         TileHeight / 2,
                         j * TileWidth + TileWidth / 2
                     ),
                     Quaternion.identity,
-                    transform);
-                _tiles[i, j] = inst.GetComponent<Tile>();
+                    transform).GetComponent<Tile>();
+                tile.Location = (i, j);
+                _tiles[i, j] = tile;
             }
         }
-        Init();
-        _tiles[0, 0].piece = temp;
-
     }
-
-    void Init()
+    
+    private void InitPieces()
     {
-        for (int i = 0; i < 2; i++)
+        temp.Move(_tiles[0,0]);
+        _tiles[0, 0].piece = temp;
+        _tiles[0, 0].Location = (0, 0);
+    }
+    
+    public void SetTurn(Game.Team team)
+    {
+        foreach (var tile in _tiles)
         {
-            for (int j = 0; j < 8; j++)
+            if (tile.piece != null && tile.piece.team == team)
             {
-                _tiles[j, i].SetInit(true);
-                //dont need to make ai side active, 
-                //_tiles[j, 8 - i - 1].SetActive(true);
+                tile.SetState(Tile.State.Hidden);
+            }
+            else
+            {
+                tile.SetState(Tile.State.Inactive);
             }
         }
     }
 
+    private void DeactivateTiles()
+    {
+        foreach (var tile in _tiles)
+        {
+            tile.SetState(Tile.State.Inactive);
+        }
+    }
+
+    private void ClickTile(Tile tile)
+    {
+        switch (tile.state)
+        {
+            case Tile.State.Hidden:
+                selected = tile;
+                var moves = tile.piece.GetMoves(_tiles);
+                SetTurn(tile.piece.team);
+                foreach (var (x, y) in moves)
+                {
+                    _tiles[x, y].SetState(Tile.State.Active);
+                }
+                break;
+            case Tile.State.Active:
+                selected.piece.Move(tile).AddListener(game.EndTurn);
+                DeactivateTiles();
+                break;
+            default:
+                break;
+        }
+
+    }
+    
+    
     private void Update()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            var ray = _cam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out var hit, Mathf.Infinity, TileMask))
+            {
+                ClickTile(hit.collider.gameObject.GetComponent<Tile>());
+            }
+        }
+        
+        
+        /*
         if (Game.playerTurn)
         {
             //selecting a tile
@@ -112,7 +170,7 @@ public class Board : MonoBehaviour
             }
 
 
-        }
+        }*/
 
     }
 }
