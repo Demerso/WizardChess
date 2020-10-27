@@ -8,50 +8,85 @@ public class Tile : MonoBehaviour
     [SerializeField] private Material activeMaterial = null;
 
     private bool _isActive;
-    
+    private State status;
+    public Pieces piece;
     private MeshRenderer _renderer;
-    
+    public  static bool selected = false;
     private void Awake()
     {
+        
         _renderer = GetComponent<MeshRenderer>();
-        SetActive(false);
+        SetInit(false);
+     
     }
 
-    public void SetActive(bool active)
+    public void SetInit(bool active)
     {
+      
         _isActive = active;
-        SetState(_isActive ? State.Active : State.Hidden);
+        SetState(_isActive ? State.Hidden : State.Inactive);
     }
+    public void SetActive(bool active) {
 
+        selected = active;
+        SetState(active ? State.Active : State.Hidden);
+    }
     private void OnMouseEnter()
     {
-        if (_isActive)
+       
+        if (_isActive && !selected)
         {
+            Board.tileHover = this;
+            SetState(State.Hover);
+        }
+        //prob dont need selected,for in order to be active,
+        //would need selected to be true
+        if (status == State.Active && selected)
+        {
+            
+            Board.tileHover = this;
             SetState(State.Hover);
         }
     }
+    
 
     private void OnMouseExit()
     {
-        if (_isActive)
+        Board.tileHover = null;
+        if (_isActive && !selected)
         {
+            SetState(State.Hidden);
+        }
+        //prob dont need selected,for in order to be active,
+        //would need selected to be true
+        if (status == State.Hover && selected)
+        {
+            
             SetState(State.Active);
         }
     }
 
+
     private void SetState(State state)
     {
+        status = state;
         switch (state)
         {
-            case State.Hidden:
+            case State.Inactive:
                 gameObject.SetActive(false);
                 break;
-            case State.Active:
+            case State.Hidden:
                 gameObject.SetActive(true);
+                _renderer.enabled = false;
+                break;
+            case State.Active:
+                //gameObject.SetActive(true);
+                _renderer.enabled = true;
                 _renderer.material = activeMaterial;
                 break;
             case State.Hover:
-                gameObject.SetActive(true);
+                //gameObject.SetActive(true);
+                _renderer.enabled = true;
                 _renderer.material = hoveredMaterial;
                 break;
             default:
@@ -61,6 +96,6 @@ public class Tile : MonoBehaviour
 
     private enum State
     {
-        Hidden, Active, Hover 
+        Hidden, Active, Hover,Inactive
     }
 }
