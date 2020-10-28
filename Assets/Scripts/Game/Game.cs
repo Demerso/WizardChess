@@ -40,7 +40,7 @@ public class Game : MonoBehaviour
         var timeToStart = Time.time;
         while (Quaternion.Angle(cameraHolder.rotation, rot) > 0.05f)
         {
-            cameraHolder.rotation = Quaternion.Slerp(cameraHolder.rotation, rot, 0.01f);
+            cameraHolder.rotation = Quaternion.Slerp(cameraHolder.rotation, rot, 0.1f);
             yield return null;
         }
         yield return null;

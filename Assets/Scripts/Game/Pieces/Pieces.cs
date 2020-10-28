@@ -44,7 +44,7 @@ public abstract class Pieces : MonoBehaviour
 
     public void Update()
     {
-        if (_moving && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance < 0.05f)
+        if (_moving && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance < 0.1f)
         {
             _moving = false;
             ActionFinished.Invoke();
