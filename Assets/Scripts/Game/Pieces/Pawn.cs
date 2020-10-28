@@ -19,13 +19,15 @@ public class Pawn : Pieces
             }
         }
         // Move diagonal
-        if (ValidCoord((x+1, y+dir)) && tiles[x+1, y+dir].piece != null) moves.Add((x+1, y+dir));
-        if (ValidCoord((x-1, y+dir)) && tiles[x-1, y+dir].piece != null) moves.Add((x-1, y+dir));
+        if (ValidCoord((x+1, y+dir)) && tiles[x+1, y+dir].piece != null && tiles[x+1, y+dir].piece.team != team) 
+            moves.Add((x+1, y+dir));
+        if (ValidCoord((x-1, y+dir)) && tiles[x-1, y+dir].piece != null && tiles[x-1, y+dir].piece.team != team)
+            moves.Add((x-1, y+dir));
         return moves;
     }
 
     protected override UnityEvent Attack()
     {
-        return _actionFinished;
+        return ActionFinished;
     }
 }

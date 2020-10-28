@@ -8,6 +8,9 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject tilePrefab = null;
     [SerializeField] private Game game;
 
+    [SerializeField] private PieceSet lightPieceSet;
+    [SerializeField] private PieceSet darkPieceSet;
+
     private const float TileWidth = 6;
     private const float TileHeight = 0.1f;
     private const int TileMask = 1 << 8;
@@ -16,7 +19,6 @@ public class Board : MonoBehaviour
     private Camera _cam;
     private Tile _selected;
     
-    public Pieces temp;
     private readonly Tile[,] _tiles = new Tile[8, 8];
     
     
@@ -53,9 +55,30 @@ public class Board : MonoBehaviour
     
     private void InitPieces()
     {
-        temp.Move(_tiles[0,0]);
-        _tiles[0, 0].piece = temp;
-        _tiles[0, 0].Location = (0, 0);
+        var pieceSet = lightPieceSet;
+        for (var j = 0; j < 8; j += 7)
+        {
+            InitPiece(pieceSet.rook, 0, j);
+            InitPiece(pieceSet.knight, 1, j);
+            InitPiece(pieceSet.bishop, 2, j);
+            InitPiece(pieceSet.king, 3, j);
+            InitPiece(pieceSet.queen, 4, j);
+            InitPiece(pieceSet.bishop, 5, j);
+            InitPiece(pieceSet.knight, 6, j);
+            InitPiece(pieceSet.rook, 7, j);
+            for (var i = 0; i < 8; i++)
+            {
+                InitPiece(pieceSet.pawn, i, pieceSet.pawn == lightPieceSet.pawn ? j+1 : j-1);
+            }
+            pieceSet = darkPieceSet;
+        }
+    }
+
+    private void InitPiece(GameObject obj, int x, int y)
+    {
+        var piece = Instantiate(obj, _tiles[x, y].transform.position, Quaternion.identity).GetComponent<Pieces>();
+        _tiles[x, y].piece = piece;
+        piece.Loc = (x, y);
     }
     
     public void SetTurn(Game.Team team)
@@ -96,6 +119,7 @@ public class Board : MonoBehaviour
                 break;
             case Tile.State.Active:
                 _selected.piece.Move(tile).AddListener(game.EndTurn);
+                _selected.piece = null;
                 DeactivateTiles();
                 break;
             default:
@@ -172,5 +196,16 @@ public class Board : MonoBehaviour
 
         }*/
 
+    }
+
+    [Serializable]
+    private struct PieceSet
+    {
+        public GameObject king;
+        public GameObject queen;
+        public GameObject bishop;
+        public GameObject knight;
+        public GameObject rook;
+        public GameObject pawn;
     }
 }

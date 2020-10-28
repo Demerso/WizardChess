@@ -59,7 +59,7 @@ public class Bishop : Pieces
 
     protected override UnityEvent Attack()
     {
-        return _actionFinished;
+        return ActionFinished;
     }
     
 }

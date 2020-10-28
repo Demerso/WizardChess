@@ -9,19 +9,19 @@ using UnityEngine.Events;
 
 public abstract class Pieces : MonoBehaviour
 {
-    protected (int, int) Loc;
+    public (int, int) Loc;
     
-    protected NavMeshAgent agent;
+    private NavMeshAgent _agent;
     public Game.Team team;
     public bool hasMoved = false;
 
     private bool _moving = false;
 
-    protected UnityEvent _actionFinished;
+    protected UnityEvent ActionFinished;
     
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     public abstract IEnumerable<(int, int)> GetMoves(Tile[,] tiles);
@@ -34,19 +34,20 @@ public abstract class Pieces : MonoBehaviour
     {
         hasMoved = true;
         Loc = tile.Location;
-        agent.SetDestination(tile.transform.position);
+        tile.piece = this;
+        _agent.SetDestination(tile.transform.position);
         _moving = true;
-        _actionFinished = new UnityEvent();
+        ActionFinished = new UnityEvent();
         if (tile.piece != null && tile.piece.team != team) Attack();
-        return _actionFinished;
+        return ActionFinished;
     }
 
     public void Update()
     {
-        if (_moving && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.05f)
+        if (_moving && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance < 0.05f)
         {
             _moving = false;
-            _actionFinished.Invoke();
+            ActionFinished.Invoke();
         }
     }
 

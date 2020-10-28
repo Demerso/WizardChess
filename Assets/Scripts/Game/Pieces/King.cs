@@ -15,8 +15,8 @@ public class King : Pieces
         {
             for (var j = -1; j <= 1; j++)
             {
-                if (i==0 && j==0) break;
-                if (!ValidCoord((x + i, y + j))) break;
+                if (i==0 && j==0) continue;
+                if (!ValidCoord((x + i, y + j))) continue;
                 if (tiles[x+i, y+j].piece == null) {moves.Add((x+i, y+j));}
                 else if (tiles[x+i, y+j].piece.team != team) moves.Add((x+i, y+j));
             }
@@ -27,6 +27,6 @@ public class King : Pieces
 
     protected override UnityEvent Attack()
     {
-        return _actionFinished;
+        return ActionFinished;
     }
 }

@@ -10,7 +10,7 @@ public class Rook : Pieces
         var (x, y) = Loc;
         var moves = new List<(int,int)>();
         // Straight 1
-        for (var i = 0; i < 8; i++)
+        for (var i = 1; i < 8; i++)
         {
             if (!ValidCoord((x + i, y))) break;
             if (tiles[x + i, y].piece != null)
@@ -21,7 +21,7 @@ public class Rook : Pieces
             moves.Add((x+i, y));
         }
         // Straight 2
-        for (var i = 0; i < 8; i++)
+        for (var i = 1; i < 8; i++)
         {
             if (!ValidCoord((x - i, y))) break;
             if (tiles[x - i, y].piece != null)
@@ -32,7 +32,7 @@ public class Rook : Pieces
             moves.Add((x - i, y));
         }
         // Straight 3
-        for (var i = 0; i < 8; i++)
+        for (var i = 1; i < 8; i++)
         {
             if (!ValidCoord((x, y+i))) break;
             if (tiles[x, y+i].piece != null)
@@ -43,7 +43,7 @@ public class Rook : Pieces
             moves.Add((x, y+i));
         }
         // Straight 4
-        for (var i = 0; i < 8; i++)
+        for (var i = 1; i < 8; i++)
         {
             if (!ValidCoord((x, y-i))) break;
             if (tiles[x, y-i].piece != null)
@@ -58,6 +58,6 @@ public class Rook : Pieces
 
     protected override UnityEvent Attack()
     {
-        return _actionFinished;
+        return ActionFinished;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Knight : Pieces
 {
-    private static readonly (int, int)[] DefaultMoves = new (int, int)[]
+    private static readonly (int, int)[] DefaultMoves =
     {
         (2, 1), (1, 2), (-1, 2), (-2, 1),
         (-2, -1), (-1, -2), (1, -2), (2, -1)
@@ -18,8 +18,8 @@ public class Knight : Pieces
 
         foreach (var (i, j) in DefaultMoves)
         {
-            if (!ValidCoord((x + i, y + j))) break;
-            if (tiles[x+i, y+j].piece == null) {moves.Add((x+i, y+j));}
+            if (!ValidCoord((x + i, y + j))) continue;
+            if (tiles[x+i, y+j].piece == null) moves.Add((x+i, y+j));
             else if (tiles[x+i, y+j].piece.team != team) moves.Add((x+i, y+j));
         }
 
@@ -28,6 +28,6 @@ public class Knight : Pieces
 
     protected override UnityEvent Attack()
     {
-        return _actionFinished;
+        return ActionFinished;
     }
 }
