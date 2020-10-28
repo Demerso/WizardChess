@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,8 +14,8 @@ public class Board : MonoBehaviour
     
     private Vector3 _boardCorner;
     private Camera _cam;
+    private Tile _selected;
     
-    public Tile selected;
     public Pieces temp;
     private readonly Tile[,] _tiles = new Tile[8, 8];
     
@@ -85,7 +86,7 @@ public class Board : MonoBehaviour
         switch (tile.state)
         {
             case Tile.State.Hidden:
-                selected = tile;
+                _selected = tile;
                 var moves = tile.piece.GetMoves(_tiles);
                 SetTurn(tile.piece.team);
                 foreach (var (x, y) in moves)
@@ -94,7 +95,7 @@ public class Board : MonoBehaviour
                 }
                 break;
             case Tile.State.Active:
-                selected.piece.Move(tile).AddListener(game.EndTurn);
+                _selected.piece.Move(tile).AddListener(game.EndTurn);
                 DeactivateTiles();
                 break;
             default:
@@ -102,8 +103,7 @@ public class Board : MonoBehaviour
         }
 
     }
-    
-    
+
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))
