@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3317007608152708483}
   - component: {fileID: 3317007608152708480}
   - component: {fileID: 3317007608152708484}
+  - component: {fileID: -4802562067739055921}
   m_Layer: 2
   m_Name: Bishop
   m_TagString: Untagged
@@ -84,6 +85,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   hasMoved: 0
+--- !u!114 &-4802562067739055921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317007608152708494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 1
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &4816441253189148943
 PrefabInstance:
   m_ObjectHideFlags: 0
