@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 78f137638b342bb47b9f78bb0b2325f2
+guid: 60a4230090709894dbb6bb697a702745
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: King_Win
+    second: Bishop_Defeat
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: King_Win
+      name: Bishop_Defeat
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 261
+      lastFrame: 285
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

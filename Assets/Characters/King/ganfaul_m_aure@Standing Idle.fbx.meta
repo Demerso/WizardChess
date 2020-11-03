@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: DKing_Selected
+    second: King_Selected
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: DKing_Selected
+      name: King_Selected
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
