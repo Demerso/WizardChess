@@ -888,21 +888,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 199372076017340467, guid: 2b2b1609a18215149b65ded623ae9417, type: 3}
   game: {fileID: 793532679}
-  lightPieceSet:
-    king: {fileID: 3317007608152708494, guid: 89dc419d27f7bb54d899a1abca450232, type: 3}
-    queen: {fileID: 3317007608152708494, guid: b5419891207b60a43a4322f160fd28a8, type: 3}
-    bishop: {fileID: 3317007608152708494, guid: 860bbb00f0528b343943a5477f9fd5b8, type: 3}
-    knight: {fileID: 3317007608152708494, guid: 9ba9b3fcc08183148ac29988f72e818c, type: 3}
-    rook: {fileID: 3317007608152708494, guid: 7a9ecf62910a2464e879afb1d609cb43, type: 3}
-    pawn: {fileID: 3317007608152708494, guid: ec55f49f7ce7eda4598695eec33ca4a2, type: 3}
-  darkPieceSet:
+  pieceSet:
     king: {fileID: 3317007608152708494, guid: 574a6b6e0c3070847b6e54eb0ab80165, type: 3}
     queen: {fileID: 3317007608152708494, guid: ee85b126bcaacfe41b360f57b773b6e1, type: 3}
     bishop: {fileID: 3317007608152708494, guid: dc17521942cfae6429ac11e15a0f3058, type: 3}
     knight: {fileID: 3317007608152708494, guid: d0727495f5f275f4ba37bca226b74ad8, type: 3}
     rook: {fileID: 3317007608152708494, guid: f37616544000695469f1376ef19d6212, type: 3}
     pawn: {fileID: 3317007608152708494, guid: c62c9b7662c41d240b19a59049bf0b38, type: 3}
-  temp: {fileID: 0}
 --- !u!1001 &308174067
 PrefabInstance:
   m_ObjectHideFlags: 0
