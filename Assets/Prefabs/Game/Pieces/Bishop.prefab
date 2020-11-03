@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af6844526e69344784dab9dcb6dd3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
+  outline: {fileID: -4802562067739055921}
   hasMoved: 0
 --- !u!114 &-4802562067739055921
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 3
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
   outlineWidth: 2
   precomputeOutline: 1

@@ -9,10 +9,14 @@ using UnityEngine.Events;
 
 public abstract class Pieces : MonoBehaviour
 {
-    public (int, int) Loc;
+    [SerializeField] private Outline outline;
     
+    public (int, int) Loc;
+
     private NavMeshAgent _agent;
+
     public Game.Team team;
+
     public bool hasMoved = false;
 
     private bool _moving = false;
@@ -49,6 +53,12 @@ public abstract class Pieces : MonoBehaviour
             _moving = false;
             ActionFinished.Invoke();
         }
+    }
+
+    public void SetTeam(Game.Team t)
+    {
+        team = t;
+        if (outline != null) outline.OutlineColor = t == Game.Team.Light ? Color.white : Color.black;
     }
 
     protected static bool ValidCoord((int, int) coord)

@@ -8,8 +8,7 @@ public class Board : MonoBehaviour
     [SerializeField] private GameObject tilePrefab = null;
     [SerializeField] private Game game;
 
-    [SerializeField] private PieceSet lightPieceSet;
-    [SerializeField] private PieceSet darkPieceSet;
+    [SerializeField] private PieceSet pieceSet;
 
     private const float TileWidth = 6;
     private const float TileHeight = 0.1f;
@@ -55,28 +54,30 @@ public class Board : MonoBehaviour
     
     private void InitPieces()
     {
-        var pieceSet = lightPieceSet;
+        var team = Game.Team.Light;
         for (var j = 0; j < 8; j += 7)
         {
-            InitPiece(pieceSet.rook, 0, j);
-            InitPiece(pieceSet.knight, 1, j);
-            InitPiece(pieceSet.bishop, 2, j);
-            InitPiece(pieceSet.king, 3, j);
-            InitPiece(pieceSet.queen, 4, j);
-            InitPiece(pieceSet.bishop, 5, j);
-            InitPiece(pieceSet.knight, 6, j);
-            InitPiece(pieceSet.rook, 7, j);
-            for (var i = 0; i < 8; i++)
-            {
-                InitPiece(pieceSet.pawn, i, pieceSet.pawn == lightPieceSet.pawn ? j+1 : j-1);
-            }
-            pieceSet = darkPieceSet;
+            InitPiece(pieceSet.rook, 0, j, team);
+            InitPiece(pieceSet.knight, 1, j, team);
+            InitPiece(pieceSet.bishop, 2, j, team);
+            InitPiece(pieceSet.king, 3, j, team);
+            InitPiece(pieceSet.queen, 4, j, team);
+            InitPiece(pieceSet.bishop, 5, j, team);
+            InitPiece(pieceSet.knight, 6, j, team);
+            InitPiece(pieceSet.rook, 7, j, team);
+            team = Game.Team.Dark;
+        }
+        for (var i = 0; i < 8; i++)
+        {
+            InitPiece(pieceSet.pawn, i, 1, Game.Team.Light);
+            InitPiece(pieceSet.pawn, i, 6, Game.Team.Dark);
         }
     }
 
-    private void InitPiece(GameObject obj, int x, int y)
+    private void InitPiece(GameObject obj, int x, int y, Game.Team team)
     {
         var piece = Instantiate(obj, _tiles[x, y].transform.position, Quaternion.identity).GetComponent<Pieces>();
+        piece.SetTeam(team);
         _tiles[x, y].piece = piece;
         piece.Loc = (x, y);
     }
