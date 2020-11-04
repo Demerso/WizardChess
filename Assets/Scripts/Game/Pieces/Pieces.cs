@@ -12,6 +12,9 @@ public abstract class Pieces : MonoBehaviour
     [SerializeField] private Outline outline;
     
     public (int, int) Loc;
+    
+    private Collider[] _colliders;
+    private Rigidbody[] _rigidbodies;
 
     private NavMeshAgent _agent;
 
@@ -26,6 +29,9 @@ public abstract class Pieces : MonoBehaviour
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        _colliders = GetComponentsInChildren<Collider>();
+        _rigidbodies = GetComponentsInChildren<Rigidbody>();
+        SetRagdoll(false);
     }
 
     public abstract IEnumerable<(int, int)> GetMoves(Tile[,] tiles);
@@ -66,4 +72,19 @@ public abstract class Pieces : MonoBehaviour
         var (x, y) = coord;
         return x >= 0 && x < 8 && y >= 0 && y < 8;
     }
+    
+    protected void SetRagdoll(bool ragdoll)
+    {
+        _agent.enabled = !ragdoll;
+        foreach (var coll in _colliders)
+        {
+            coll.isTrigger = !ragdoll;
+        }
+        foreach (var body in _rigidbodies)
+        {
+            body.isKinematic = !ragdoll;
+        }
+        GetComponentInChildren<Animator>().enabled = !ragdoll;
+    }
+    
 }
