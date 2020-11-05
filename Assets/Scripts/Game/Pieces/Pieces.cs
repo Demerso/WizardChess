@@ -11,23 +11,26 @@ public abstract class Pieces : MonoBehaviour
     [SerializeField] protected Animator animator;
     
     public (int, int) Loc;
+    public Game.Team team;
+    public bool hasMoved = false;
     
     private Collider[] _colliders;
     private Rigidbody[] _rigidbodies;
-
     private NavMeshAgent _agent;
 
-    public Game.Team team;
-
-    public bool hasMoved = false;
-
     protected UnityEvent ActionFinished;
+    protected Quaternion DefaultDirection;
+    
     
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _colliders = GetComponentsInChildren<Collider>();
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
+        DefaultDirection = team == Game.Team.Light? 
+            new Quaternion(0,0,0,1) : 
+            new Quaternion(0,1,0,0);
+        transform.rotation = DefaultDirection;
         SetRagdoll(false);
     }
 
@@ -60,10 +63,9 @@ public abstract class Pieces : MonoBehaviour
         }
         else
         {
-            print("out");
             finished.Invoke();
         }
-        
+        StartCoroutine(ResetRotation());
     }
     
     private bool _notMoving()
@@ -100,4 +102,15 @@ public abstract class Pieces : MonoBehaviour
 
     public abstract void SetSelected(bool selected);
 
+    private IEnumerator ResetRotation()
+    {
+        while (Mathf.Abs(Quaternion.Angle(transform.rotation, DefaultDirection)) > 0.5f)
+        {
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation, 
+                DefaultDirection, 
+                0.1f);
+            yield return null;
+        }
+    }
 }
