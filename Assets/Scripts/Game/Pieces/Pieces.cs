@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -18,8 +20,6 @@ public abstract class Pieces : MonoBehaviour
     public Game.Team team;
 
     public bool hasMoved = false;
-
-    private bool _moving = false;
 
     protected UnityEvent ActionFinished;
     
@@ -42,20 +42,33 @@ public abstract class Pieces : MonoBehaviour
         hasMoved = true;
         Loc = tile.Location;
         tile.piece = this;
-        _agent.SetDestination(tile.transform.position);
-        _moving = true;
         ActionFinished = new UnityEvent();
-        if (tile.piece != null && tile.piece.team != team) Attack();
+        StartCoroutine(_move(ActionFinished, tile));
         return ActionFinished;
     }
 
-    public void Update()
+    private IEnumerator _move(UnityEvent finished, Tile tile)
     {
-        if (_moving && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance < 0.1f)
+        _agent.SetDestination(tile.transform.position);
+        animator.SetBool("Walking", true);
+        yield return null;
+        yield return new WaitUntil(_notMoving);
+        animator.SetBool("Walking", false);
+        if (tile.piece != null && tile.piece.team != team)
         {
-            _moving = false;
-            ActionFinished.Invoke();
+            Attack();
         }
+        else
+        {
+            print("out");
+            finished.Invoke();
+        }
+        
+    }
+    
+    private bool _notMoving()
+    {
+        return _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance < 0.1f;
     }
 
     public void SetTeam(Game.Team t)

@@ -122,6 +122,7 @@ public class Board : MonoBehaviour
                 }
                 break;
             case Tile.State.Active:
+                _selected.piece.SetSelected(false);
                 _selected.piece.Move(tile).AddListener(game.EndTurn);
                 _selected.piece = null;
                 DeactivateTiles();
