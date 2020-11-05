@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Reflection;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -79,6 +75,7 @@ public abstract class Pieces : MonoBehaviour
         foreach (var coll in _colliders)
         {
             coll.isTrigger = !ragdoll;
+            coll.gameObject.layer = ragdoll ? 0 : 2;
         }
         foreach (var body in _rigidbodies)
         {
