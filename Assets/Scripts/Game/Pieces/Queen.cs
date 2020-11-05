@@ -105,4 +105,9 @@ public class Queen : Pieces
     {
         return ActionFinished;
     }
+
+    public override void SetSelected(bool selected)
+    {
+        animator.SetTrigger("Selected");
+    }
 }

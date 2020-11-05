@@ -29,4 +29,9 @@ public class King : Pieces
     {
         return ActionFinished;
     }
+
+    public override void SetSelected(bool selected)
+    {
+        animator.SetBool("Selected", selected);
+    }
 }

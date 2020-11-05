@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public abstract class Pieces : MonoBehaviour
 {
     [SerializeField] private Outline outline;
+    [SerializeField] protected Animator animator;
     
     public (int, int) Loc;
     
@@ -83,5 +84,7 @@ public abstract class Pieces : MonoBehaviour
         }
         GetComponentInChildren<Animator>().enabled = !ragdoll;
     }
-    
+
+    public abstract void SetSelected(bool selected);
+
 }

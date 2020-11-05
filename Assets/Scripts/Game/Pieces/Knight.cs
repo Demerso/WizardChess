@@ -30,4 +30,9 @@ public class Knight : Pieces
     {
         return ActionFinished;
     }
+
+    public override void SetSelected(bool selected)
+    {
+        if (selected) animator.SetTrigger("Selected");
+    }
 }

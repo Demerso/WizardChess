@@ -110,7 +110,10 @@ public class Board : MonoBehaviour
         switch (tile.state)
         {
             case Tile.State.Hidden:
+                if (_selected != null && _selected.piece != null)
+                    _selected.piece.SetSelected(false);
                 _selected = tile;
+                tile.piece.SetSelected(true);
                 var moves = tile.piece.GetMoves(_tiles);
                 SetTurn(tile.piece.team);
                 foreach (var (x, y) in moves)

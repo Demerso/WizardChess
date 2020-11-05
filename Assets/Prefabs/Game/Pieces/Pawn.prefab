@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 1760386025425040751}
+  animator: {fileID: 3465342331870321840}
   team: 0
   hasMoved: 0
 --- !u!114 &1760386025425040751
