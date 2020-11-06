@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,14 +13,19 @@ public class Board : MonoBehaviour
     private const float TileWidth = 6;
     private const float TileHeight = 0.1f;
     private const int TileMask = 1 << 8;
-    
+
     private Vector3 _boardCorner;
     private Camera _cam;
-    private Tile _selected;
-    
-    private readonly Tile[,] _tiles = new Tile[8, 8];
-    
-    
+    public Tile _selected;
+
+    public List<Pieces> p1;
+    public List<Pieces> p2;
+    public readonly Tile[,] _tiles = new Tile[8, 8];
+    public AI ai2;
+
+
+
+
     // Board x position is horizontal
     private void Start()
     {
@@ -29,6 +33,22 @@ public class Board : MonoBehaviour
         _boardCorner = transform.position;
         InitTiles();
         InitPieces();
+        InitList();
+        if (GameSettings.Player2 != GameSettings.PlayerType.Player)
+        {
+            ai2 = new Hard
+            {
+                board = this
+            };
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 6; j < 8; j++)
+                {
+                    ai2.Addpiece(_tiles[i, j].piece);
+                }
+            }
+        }
+
     }
 
     private void InitTiles()
@@ -52,7 +72,7 @@ public class Board : MonoBehaviour
             }
         }
     }
-    
+
     private void InitPieces()
     {
         var pieceSet = lightPieceSet;
@@ -68,7 +88,7 @@ public class Board : MonoBehaviour
             InitPiece(pieceSet.rook, 7, j);
             for (var i = 0; i < 8; i++)
             {
-                InitPiece(pieceSet.pawn, i, pieceSet.pawn == lightPieceSet.pawn ? j+1 : j-1);
+                InitPiece(pieceSet.pawn, i, pieceSet.pawn == lightPieceSet.pawn ? j + 1 : j - 1);
             }
             pieceSet = darkPieceSet;
         }
@@ -80,7 +100,18 @@ public class Board : MonoBehaviour
         _tiles[x, y].piece = piece;
         piece.Loc = (x, y);
     }
-    
+
+    private void InitList()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                p1.Add(_tiles[i, j].piece);
+                p2.Add(_tiles[i, 7 - j].piece);
+            }
+        }
+    }
     public void SetTurn(Game.Team team)
     {
         foreach (var tile in _tiles)
@@ -104,7 +135,7 @@ public class Board : MonoBehaviour
         }
     }
 
-    private void ClickTile(Tile tile)
+    public void ClickTile(Tile tile)
     {
         switch (tile.state)
         {
@@ -118,9 +149,12 @@ public class Board : MonoBehaviour
                 }
                 break;
             case Tile.State.Active:
+
                 _selected.piece.Move(tile).AddListener(game.EndTurn);
+
                 _selected.piece = null;
                 DeactivateTiles();
+
                 break;
             default:
                 break;
@@ -130,16 +164,39 @@ public class Board : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (game.currP == GameSettings.PlayerType.Player)
         {
-            var ray = _cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit, Mathf.Infinity, TileMask))
+
+            if (Input.GetMouseButtonUp(0))
             {
-                ClickTile(hit.collider.gameObject.GetComponent<Tile>());
+                var ray = _cam.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out var hit, Mathf.Infinity, TileMask))
+                {
+
+                    ClickTile(hit.collider.gameObject.GetComponent<Tile>());
+                }
             }
         }
-        
-        
+        else
+        {
+            if (ai2.playing == false)
+            {
+
+                ai2.Play();
+                game.EndTurn();
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+
         /*
         if (Game.playerTurn)
         {

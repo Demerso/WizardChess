@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -9,11 +7,12 @@ public class Game : MonoBehaviour
     [SerializeField] private Board board;
     [SerializeField] private Transform cameraHolder;
 
-    private Team _currTeam = Team.Light;
-
+    public static Team _currTeam = Team.Light;
+    public GameSettings.PlayerType currP = GameSettings.Player1;
     private void Start()
     {
         board.SetTurn(Team.Light);
+
     }
 
     public void EndTurn()
@@ -22,17 +21,20 @@ public class Game : MonoBehaviour
         {
             case Team.Dark:
                 _currTeam = Team.Light;
+                currP = GameSettings.Player1;
                 break;
             case Team.Light:
                 _currTeam = Team.Dark;
+                currP = GameSettings.Player2;
                 break;
             default:
                 break;
         }
+
         board.SetTurn(_currTeam);
         var rot = Quaternion.AngleAxis(_currTeam == Team.Light ? 0 : 180, Vector3.up);
         StartCoroutine(RotateCam(rot));
-        
+
     }
 
     private IEnumerator RotateCam(Quaternion rot)

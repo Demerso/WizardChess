@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Reflection;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -10,16 +6,16 @@ using UnityEngine.Events;
 public abstract class Pieces : MonoBehaviour
 {
     public (int, int) Loc;
-    
+
     private NavMeshAgent _agent;
     public Game.Team team;
     public bool hasMoved = false;
-
+    public int value;
     private bool _moving = false;
 
     protected UnityEvent ActionFinished;
-    
-    private void Start()
+
+    protected void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
     }
@@ -29,18 +25,28 @@ public abstract class Pieces : MonoBehaviour
     protected abstract UnityEvent Attack();
 
 
-    //find a way to change location, maybe change to tile
     public UnityEvent Move(Tile tile)
     {
         hasMoved = true;
         Loc = tile.Location;
-        tile.piece = this;
+
         _agent.SetDestination(tile.transform.position);
         _moving = true;
         ActionFinished = new UnityEvent();
         if (tile.piece != null && tile.piece.team != team) Attack();
+        tile.piece = this;
         return ActionFinished;
     }
+    public virtual void GhostMove(Tile tile)
+    {
+
+        Loc = tile.Location;
+        tile.piece = this;
+        // hasMoved = true;
+
+
+    }
+
 
     public void Update()
     {
@@ -50,6 +56,8 @@ public abstract class Pieces : MonoBehaviour
             ActionFinished.Invoke();
         }
     }
+
+
 
     protected static bool ValidCoord((int, int) coord)
     {

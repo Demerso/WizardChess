@@ -1,30 +1,27 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] private Material hoveredMaterial = null;
     [SerializeField] private Material activeMaterial = null;
     [SerializeField] private Material hiddenMaterial;
-    
+
     private MeshRenderer _renderer;
 
-    public (int, int) Location = (0,0);
+    public (int, int) Location = (0, 0);
     public Pieces piece;
     public State state;
-    
+
     private void Awake()
     {
         _renderer = GetComponent<MeshRenderer>();
         SetState(State.Inactive);
     }
-    
+
     private void OnMouseEnter()
     {
         IsHovered(true);
     }
-    
+
 
     private void OnMouseExit()
     {
@@ -43,8 +40,8 @@ public class Tile : MonoBehaviour
             SetState(state);
         }
     }
-    
-    
+
+
     public void SetState(State newState)
     {
         state = newState;
