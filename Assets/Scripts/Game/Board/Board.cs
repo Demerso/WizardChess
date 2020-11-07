@@ -14,13 +14,10 @@ public class Board : MonoBehaviour
 
     private Vector3 _boardCorner;
     private Camera _cam;
-    public Tile _selected;
+    private Tile _selected;
 
     public readonly Tile[,] Tiles = new Tile[8, 8];
-    public AI ai2;
-
-
-
+    
 
     // Board x position is horizontal
     private void Start()

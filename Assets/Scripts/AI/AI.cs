@@ -17,7 +17,9 @@ public abstract class AI
     public void Move((Pieces piece, int x, int y) move)
     {
         var (piece, x, y) = move;
+        var (px, py) = piece.Loc;
         piece.Move(Board.Tiles[x, y]).AddListener(Game.EndTurn);
+        Board.Tiles[px, py].piece = null;
     }
     
     public abstract IEnumerator SelectMove(Action<(Pieces, int, int)> action);

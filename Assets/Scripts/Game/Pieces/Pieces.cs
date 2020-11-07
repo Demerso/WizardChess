@@ -57,6 +57,7 @@ public abstract class Pieces : MonoBehaviour
             tile.piece.SetRagdoll(true);
             //Attack();
         }
+        
         Loc = tile.Location;
         tile.piece = this;
         yield return new WaitUntil(_notMoving);
