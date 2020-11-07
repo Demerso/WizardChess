@@ -1,14 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using UnityEngine.Events;
 
 public class Pawn : Pieces
 {
+
+    public override int Value
+    {
+        get => 10 * (team == Game.Team.Light ? 1 : -1);
+    }
+
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
     {
         var (x, y) = Loc;
-        var moves = new List<(int,int)>();
+        var moves = new List<(int, int)>();
         var dir = team == Game.Team.Light ? 1 : -1;
         if (ValidCoord((x, y + dir)) && tiles[x, y + dir].piece == null)
         {
@@ -19,10 +23,10 @@ public class Pawn : Pieces
             }
         }
         // Move diagonal
-        if (ValidCoord((x+1, y+dir)) && tiles[x+1, y+dir].piece != null && tiles[x+1, y+dir].piece.team != team) 
-            moves.Add((x+1, y+dir));
-        if (ValidCoord((x-1, y+dir)) && tiles[x-1, y+dir].piece != null && tiles[x-1, y+dir].piece.team != team)
-            moves.Add((x-1, y+dir));
+        if (ValidCoord((x + 1, y + dir)) && tiles[x + 1, y + dir].piece != null && tiles[x + 1, y + dir].piece.team != team)
+            moves.Add((x + 1, y + dir));
+        if (ValidCoord((x - 1, y + dir)) && tiles[x - 1, y + dir].piece != null && tiles[x - 1, y + dir].piece.team != team)
+            moves.Add((x - 1, y + dir));
         return moves;
     }
 

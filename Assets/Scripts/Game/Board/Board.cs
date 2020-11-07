@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Board : MonoBehaviour
@@ -13,14 +11,17 @@ public class Board : MonoBehaviour
     private const float TileWidth = 6;
     private const float TileHeight = 0.1f;
     private const int TileMask = 1 << 8;
-    
+
     private Vector3 _boardCorner;
     private Camera _cam;
-    private Tile _selected;
-    
-    private readonly Tile[,] _tiles = new Tile[8, 8];
-    
-    
+    public Tile _selected;
+
+    public readonly Tile[,] Tiles = new Tile[8, 8];
+    public AI ai2;
+
+
+
+
     // Board x position is horizontal
     private void Start()
     {
@@ -47,11 +48,11 @@ public class Board : MonoBehaviour
                     Quaternion.identity,
                     transform).GetComponent<Tile>();
                 tile.Location = (i, j);
-                _tiles[i, j] = tile;
+                Tiles[i, j] = tile;
             }
         }
     }
-    
+
     private void InitPieces()
     {
         var team = Game.Team.Light;
@@ -76,15 +77,15 @@ public class Board : MonoBehaviour
 
     private void InitPiece(GameObject obj, int x, int y, Game.Team team)
     {
-        var piece = Instantiate(obj, _tiles[x, y].transform.position, Quaternion.identity).GetComponent<Pieces>();
+        var piece = Instantiate(obj, Tiles[x, y].transform.position, Quaternion.identity).GetComponent<Pieces>();
         piece.SetTeam(team);
-        _tiles[x, y].piece = piece;
+        Tiles[x, y].piece = piece;
         piece.Loc = (x, y);
     }
     
     public void SetTurn(Game.Team team)
     {
-        foreach (var tile in _tiles)
+        foreach (var tile in Tiles)
         {
             if (tile.piece != null && tile.piece.team == team)
             {
@@ -99,13 +100,13 @@ public class Board : MonoBehaviour
 
     private void DeactivateTiles()
     {
-        foreach (var tile in _tiles)
+        foreach (var tile in Tiles)
         {
             tile.SetState(Tile.State.Inactive);
         }
     }
 
-    private void ClickTile(Tile tile)
+    public void ClickTile(Tile tile)
     {
         switch (tile.state)
         {
@@ -114,18 +115,20 @@ public class Board : MonoBehaviour
                     _selected.piece.SetSelected(false);
                 _selected = tile;
                 tile.piece.SetSelected(true);
-                var moves = tile.piece.GetMoves(_tiles);
+                var moves = tile.piece.GetMoves(Tiles);
                 SetTurn(tile.piece.team);
                 foreach (var (x, y) in moves)
                 {
-                    _tiles[x, y].SetState(Tile.State.Active);
+                    Tiles[x, y].SetState(Tile.State.Active);
                 }
                 break;
             case Tile.State.Active:
                 _selected.piece.SetSelected(false);
                 _selected.piece.Move(tile).AddListener(game.EndTurn);
+
                 _selected.piece = null;
                 DeactivateTiles();
+
                 break;
             default:
                 break;
@@ -140,67 +143,10 @@ public class Board : MonoBehaviour
             var ray = _cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hit, Mathf.Infinity, TileMask))
             {
+
                 ClickTile(hit.collider.gameObject.GetComponent<Tile>());
             }
         }
-        
-        
-        /*
-        if (Game.playerTurn)
-        {
-            //selecting a tile
-            if (Input.GetMouseButtonDown(0) && selected == null && tileHover!= null)
-            {
-                //set Tile clicked to Active, will disable hover for all tile not active                //set all move for the piece active
-                //set all move Tile for the piece active
-
-                tileHover.SetActive(true);
-                selected = tileHover;
-                Debug.Log(selected.piece.moves.Count);
-                for (int i = 0; i < selected.piece.moves.Count; i++)
-                {
-                    _tiles[selected.piece.moves[i].Item1, selected.piece.moves[i].Item1].SetInit(true);
-                    _tiles[selected.piece.moves[i].Item1, selected.piece.moves[i].Item1].SetActive(true);
-                }
-            }
-            //unselect a selected tile
-            else if(Input.GetMouseButtonDown(0) && selected !=null&& tileHover == null)
-            {
-                //Didnt click on active Tile,
-                for (int i = 0; i < selected.piece.moves.Count; i++)
-                {
-                    _tiles[selected.piece.moves[i].Item1, selected.piece.moves[i].Item1].SetActive(false);
-                }
-                selected.SetActive(false);
-                selected = null;
-
-
-            }
-            //Select Destination Tile
-            else if (Input.GetMouseButtonDown(0) && selected !=null && tileHover != null)
-            {
-             
-                tileHover.piece = selected.piece;
-
-                tileHover.piece.move(tileHover);
-                //set all pieces that were back to 
-                for (int i = 0; i < selected.piece.moves.Count; i++)
-                {
-                    _tiles[selected.piece.moves[i].Item1, selected.piece.moves[i].Item1].SetActive(false);
-                    
-                }
-                selected.piece = null;
-                selected.SetActive(false);
-                selected.SetInit(false);
-                selected = null;
-
-                
-        
-            }
-
-
-        }*/
-
     }
 
     [Serializable]

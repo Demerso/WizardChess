@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,6 +16,7 @@ public abstract class Pieces : MonoBehaviour
     private Collider[] _colliders;
     private Rigidbody[] _rigidbodies;
     private NavMeshAgent _agent;
+    public abstract int Value { get; }
 
     protected UnityEvent ActionFinished;
     protected Quaternion DefaultDirection;
@@ -39,12 +39,8 @@ public abstract class Pieces : MonoBehaviour
     protected abstract UnityEvent Attack();
 
 
-    //find a way to change location, maybe change to tile
     public UnityEvent Move(Tile tile)
     {
-        hasMoved = true;
-        Loc = tile.Location;
-        tile.piece = this;
         ActionFinished = new UnityEvent();
         StartCoroutine(_move(ActionFinished, tile));
         return ActionFinished;
@@ -52,19 +48,20 @@ public abstract class Pieces : MonoBehaviour
 
     private IEnumerator _move(UnityEvent finished, Tile tile)
     {
+        hasMoved = true;
         _agent.SetDestination(tile.transform.position);
         animator.SetBool("Walking", true);
         yield return null;
-        yield return new WaitUntil(_notMoving);
-        animator.SetBool("Walking", false);
         if (tile.piece != null && tile.piece.team != team)
         {
-            Attack();
+            tile.piece.SetRagdoll(true);
+            //Attack();
         }
-        else
-        {
-            finished.Invoke();
-        }
+        Loc = tile.Location;
+        tile.piece = this;
+        yield return new WaitUntil(_notMoving);
+        animator.SetBool("Walking", false);
+        finished.Invoke();
         StartCoroutine(ResetRotation());
     }
     
