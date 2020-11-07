@@ -26,7 +26,7 @@ public class Hard : AI
             {
                 var piece = tile.piece;
                 Forward(piece, move);
-                var value = Minimax(5, -800, 800, false);
+                var value = Minimax(3, int.MinValue, int.MaxValue, false);
                 Reverse(piece, move);
                 if (value >= bestScore)
                 {
@@ -35,7 +35,7 @@ public class Hard : AI
                     bestMove = move;
                 }
                 yield return null;
-            }
+            }    
         }
         var (x, y) = bestMove;
         action((bestPiece, x, y));
@@ -45,11 +45,10 @@ public class Hard : AI
     {
         if (depth == 0)
         {
-            return -EvalBoard();
+            return EvalBoard();
         }
         if (isMax)
         {
-            var bestScore = int.MinValue;
             foreach (var tile in Board.Tiles)
             {
                 if (tile.piece == null || tile.piece.team == Game.currTeam) continue;
@@ -57,20 +56,16 @@ public class Hard : AI
                 {
                     var piece = tile.piece;
                     Forward(piece, move);
-                    bestScore = Math.Max(bestScore, Minimax(depth - 1, alpha, beta, false));
+                    var score = Minimax(depth - 1, alpha, beta, false);
                     Reverse(piece, move);
-                    alpha = Math.Max(alpha, bestScore);
-                    if (beta <= alpha)
-                    {
-                        return bestScore;
-                    }
+                    if (score >= beta) return beta;
+                    if (score > alpha) alpha = score;
                 }
             }
-            return bestScore;
+            return alpha;
         }
         else
         {
-            var bestScore = int.MaxValue;
             foreach (var tile in Board.Tiles)
             {
                 if (tile.piece == null || tile.piece.team != Game.currTeam) continue;
@@ -78,23 +73,24 @@ public class Hard : AI
                 {
                     var piece = tile.piece;
                     Forward(piece, move);
-                    bestScore = Math.Min(bestScore, Minimax(depth - 1, alpha, beta, true));
+                    var score = Minimax(depth - 1, alpha, beta, true);
                     Reverse(piece, move);
-                    beta = Math.Min(alpha, bestScore);
-                    if (beta <= alpha)
-                    {
-                        return bestScore;
-                    }
+                    if (score <= alpha) return alpha;
+                    if (score < beta) beta = score;
                 }
             }
-            return bestScore;
+            return beta;
         }
 
     }
 
     private int EvalBoard()
     {
-        return (from Tile tile in Board.Tiles where tile.piece != null select tile.piece.Value).Sum();
+        return (
+            from Tile tile in Board.Tiles 
+            where tile.piece != null 
+            select tile.piece.Value * (tile.piece.team == Game.currTeam ? 1 : -1))
+            .Sum();
     }
 
     private void Forward(Pieces p, (int x, int y) m)
@@ -103,6 +99,7 @@ public class Hard : AI
         var (px, py) = p.Loc;
         _prev.Push((px, py, Board.Tiles[x, y].piece));
 
+        Board.Tiles[px, py].piece = null;
         Board.Tiles[x, y].piece = p;
         p.Loc = (x, y);
 

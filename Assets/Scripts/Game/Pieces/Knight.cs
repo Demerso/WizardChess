@@ -3,11 +3,8 @@ using UnityEngine.Events;
 
 public class Knight : Pieces
 {
-    public override int Value
-    {
-        get => 30 * (team == Game.Team.Light ? 1 : -1);
-    }
-    
+    public override int Value => 30;
+
     private static readonly (int, int)[] DefaultMoves =
     {
         (2, 1), (1, 2), (-1, 2), (-2, 1),

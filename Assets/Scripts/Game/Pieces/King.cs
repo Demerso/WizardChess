@@ -3,11 +3,8 @@ using UnityEngine.Events;
 
 public class King : Pieces
 {
-    public override int Value
-    {
-        get => 10000  * (team == Game.Team.Light ? 1 : -1);
-    }
-    
+    public override int Value => 10000;
+
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
     {
         var (x, y) = Loc;

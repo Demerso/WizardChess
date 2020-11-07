@@ -4,10 +4,7 @@ using UnityEngine.Events;
 public class Rook : Pieces
 {
     
-    public override int Value
-    {
-        get => 50 * (team == Game.Team.Light ? 1 : -1);
-    }
+    public override int Value => 50;
 
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
     {

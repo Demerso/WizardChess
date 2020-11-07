@@ -3,11 +3,8 @@ using UnityEngine.Events;
 
 public class Bishop : Pieces
 {
-    public override int Value
-    {
-        get => 30 * (team == Game.Team.Light ? 1 : -1);
-    }
-    
+    public override int Value => 30;
+
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
     {
         var (x, y) = Loc;

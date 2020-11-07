@@ -4,10 +4,7 @@ using UnityEngine.Events;
 public class Pawn : Pieces
 {
 
-    public override int Value
-    {
-        get => 10 * (team == Game.Team.Light ? 1 : -1);
-    }
+    public override int Value => 10;
 
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
     {
