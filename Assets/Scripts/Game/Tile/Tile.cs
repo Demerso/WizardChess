@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
 
     private MeshRenderer _renderer;
 
+    public Game game;
     public (int, int) Location = (0, 0);
     public Pieces piece;
     public State state;
@@ -20,7 +21,8 @@ public class Tile : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        IsHovered(true);
+        if (!game.UIIsOpen)
+            IsHovered(true);
     }
 
 

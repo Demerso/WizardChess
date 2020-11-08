@@ -106,6 +106,11 @@ public class Queen : Pieces
         return ActionFinished;
     }
 
+    public override void Die()
+    {
+        SetRagdoll(true);
+    }
+
     public override void SetSelected(bool selected)
     {
         animator.SetTrigger("Selected");

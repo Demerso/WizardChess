@@ -29,6 +29,12 @@ public class King : Pieces
         return ActionFinished;
     }
 
+    public override void Die()
+    {
+        SetRagdoll(true);
+        game.KingDied(team);
+    }
+
     public override void SetSelected(bool selected)
     {
         animator.SetBool("Selected", selected);

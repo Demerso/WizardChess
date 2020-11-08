@@ -45,6 +45,7 @@ public class Board : MonoBehaviour
                     Quaternion.identity,
                     transform).GetComponent<Tile>();
                 tile.Location = (i, j);
+                tile.game = game;
                 Tiles[i, j] = tile;
             }
         }
@@ -76,6 +77,7 @@ public class Board : MonoBehaviour
     {
         var piece = Instantiate(obj, Tiles[x, y].transform.position, Quaternion.identity).GetComponent<Pieces>();
         piece.SetTeam(team);
+        piece.game = game;
         Tiles[x, y].piece = piece;
         piece.Loc = (x, y);
     }
@@ -135,7 +137,7 @@ public class Board : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (!game.UIIsOpen && Input.GetMouseButtonUp(0))
         {
             var ray = _cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hit, Mathf.Infinity, TileMask))

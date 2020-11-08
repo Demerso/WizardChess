@@ -8,8 +8,9 @@ public abstract class Pieces : MonoBehaviour
 {
     [SerializeField] private Outline outline;
     [SerializeField] protected Animator animator;
-    
+
     public (int, int) Loc;
+    public Game game;
     public Game.Team team;
     public bool hasMoved = false;
     
@@ -19,7 +20,7 @@ public abstract class Pieces : MonoBehaviour
     public abstract int Value { get; }
 
     protected UnityEvent ActionFinished;
-    protected Quaternion DefaultDirection;
+    private Quaternion _defaultDirection;
     
     
     private void Start()
@@ -27,10 +28,10 @@ public abstract class Pieces : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _colliders = GetComponentsInChildren<Collider>();
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
-        DefaultDirection = team == Game.Team.Light? 
+        _defaultDirection = team == Game.Team.Light? 
             new Quaternion(0,0,0,1) : 
             new Quaternion(0,1,0,0);
-        transform.rotation = DefaultDirection;
+        transform.rotation = _defaultDirection;
         SetRagdoll(false);
     }
 
@@ -46,6 +47,8 @@ public abstract class Pieces : MonoBehaviour
         return ActionFinished;
     }
 
+    public abstract void Die();
+
     private IEnumerator _move(UnityEvent finished, Tile tile)
     {
         hasMoved = true;
@@ -54,7 +57,7 @@ public abstract class Pieces : MonoBehaviour
         yield return null;
         if (tile.piece != null && tile.piece.team != team)
         {
-            tile.piece.SetRagdoll(true);
+            tile.piece.Die();
             //Attack();
         }
         
@@ -102,11 +105,11 @@ public abstract class Pieces : MonoBehaviour
 
     private IEnumerator ResetRotation()
     {
-        while (Mathf.Abs(Quaternion.Angle(transform.rotation, DefaultDirection)) > 0.5f)
+        while (Mathf.Abs(Quaternion.Angle(transform.rotation, _defaultDirection)) > 0.5f)
         {
             transform.rotation = Quaternion.Slerp(
                 transform.rotation, 
-                DefaultDirection, 
+                _defaultDirection, 
                 0.1f);
             yield return null;
         }

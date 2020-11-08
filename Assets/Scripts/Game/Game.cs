@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -6,10 +7,12 @@ public class Game : MonoBehaviour
 
     [SerializeField] private Board board;
     [SerializeField] private Transform cameraHolder;
+    [SerializeField] private InGameUI ui;
 
     private AI _hardAI;
     private AI _easyAI;
-    
+
+    public bool UIIsOpen => ui.open;
     public Team currTeam = Team.Light;
     private void Start()
     {
@@ -65,6 +68,21 @@ public class Game : MonoBehaviour
         NextTurn();
     }
 
+
+    public void KingDied(Team team)
+    {
+        switch (team)
+        {
+            case Team.Light:
+                ui.OpenWinPanel("Player 2");
+                break;
+            case Team.Dark:
+                ui.OpenWinPanel("Player 1");
+                break;
+            default:
+                break;
+        }
+    }
 
     public enum Team
     {

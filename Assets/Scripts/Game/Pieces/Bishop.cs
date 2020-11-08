@@ -61,6 +61,11 @@ public class Bishop : Pieces
         return ActionFinished;
     }
 
+    public override void Die()
+    {
+        SetRagdoll(true);
+    }
+
     public override void SetSelected(bool selected)
     {
         if (selected) animator.SetTrigger("Selected");
