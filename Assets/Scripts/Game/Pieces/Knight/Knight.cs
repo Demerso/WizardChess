@@ -5,7 +5,11 @@ using UnityEngine.Events;
 
 public class Knight : Pieces
 {
+    [SerializeField] private KnightAnimationHelper animationHelper;
+    
     public override int Value => 30;
+    
+    private const float AttackStopDistance = 7;
 
     private static readonly (int, int)[] DefaultMoves =
     {
@@ -42,16 +46,23 @@ public class Knight : Pieces
 
     protected override IEnumerator _move(UnityEvent finished, Tile tile)
     {
-        // TODO: Make for knight
         hasMoved = true;
-        agent.SetDestination(tile.transform.position);
-        animator.SetBool("Walking", true);
-        yield return null;
         if (tile.piece != null && tile.piece.team != team)
         {
+            agent.stoppingDistance = AttackStopDistance;
+            agent.SetDestination(tile.transform.position);
+            yield return null;
+            animator.SetBool("Walking", true);
+            yield return new WaitUntil(_notMoving);
+            animator.SetTrigger("Attack");
+            yield return new WaitUntil(() => animationHelper.AttackHasHit);
             StartCoroutine(tile.piece.Die());
+            yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"));
         }
-        
+        agent.stoppingDistance = 0;
+        agent.SetDestination(tile.transform.position);
+        yield return null;
+        animator.SetBool("Walking", true);
         Loc = tile.Location;
         tile.piece = this;
         yield return new WaitUntil(_notMoving);

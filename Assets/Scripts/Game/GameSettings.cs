@@ -2,7 +2,7 @@
 {
 
     public static PlayerType Player1 = PlayerType.Player;
-    public static PlayerType Player2 = PlayerType.HardAI;
+    public static PlayerType Player2 = PlayerType.Player;
 
     public enum PlayerType
     {
