@@ -71,6 +71,13 @@ public class Game : MonoBehaviour
 
     public void KingDied(Team team)
     {
+        foreach (var tile in board.Tiles)
+        {
+            if (tile.piece != null && tile.piece.team == team)
+                tile.piece.Defeat();
+            if (tile.piece != null && tile.piece.team != team)
+                tile.piece.Win();
+        }
         switch (team)
         {
             case Team.Light:

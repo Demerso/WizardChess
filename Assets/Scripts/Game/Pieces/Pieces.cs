@@ -54,7 +54,8 @@ public abstract class Pieces : MonoBehaviour
 
     protected bool _notMoving()
     {
-        return agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1f;
+        return agent.pathStatus == NavMeshPathStatus.PathComplete && 
+               agent.remainingDistance - agent.stoppingDistance < 0.1f;
     }
 
     public void SetTeam(Game.Team t)
@@ -96,5 +97,15 @@ public abstract class Pieces : MonoBehaviour
                 0.1f);
             yield return null;
         }
+    }
+
+    public void Win()
+    {
+        animator.SetTrigger("Win");
+    }
+    
+    public void Defeat()
+    {
+        animator.SetTrigger("Defeat");
     }
 }

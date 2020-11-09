@@ -16,11 +16,10 @@ public class PawnAnimationHelper : MonoBehaviour
             _attackHasHit = false;
             return true;
         }
-        set => _attackHasHit = value;
     }
 
     public void AttackHit()
     {
-        AttackHasHit = true;
+        _attackHasHit = true;
     }
 }

@@ -47,15 +47,18 @@ public class Pawn : Pieces
         hasMoved = true;
         if (tile.piece != null && tile.piece.team != team)
         {
-            agent.stoppingDistance = 1;
+            agent.stoppingDistance = 5;
             agent.SetDestination(tile.transform.position);
+            yield return null;
             animator.SetBool("Walking", true);
+            yield return new WaitUntil(_notMoving);
             animator.SetTrigger("Attack");
             yield return new WaitUntil(() => animationHelper.AttackHasHit);
             StartCoroutine(tile.piece.Die());
         }
         agent.stoppingDistance = 0;
         agent.SetDestination(tile.transform.position);
+        yield return null;
         animator.SetBool("Walking", true);
         Loc = tile.Location;
         tile.piece = this;
