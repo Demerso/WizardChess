@@ -7,6 +7,8 @@ public class Bishop : Pieces
 {
 
     [SerializeField] private BishopAnimationHelper animationHelper;
+
+    private const float AttackStopDistance = 10;
     
     public override int Value => 30;
 
@@ -78,7 +80,7 @@ public class Bishop : Pieces
         hasMoved = true;
         if (tile.piece != null && tile.piece.team != team)
         {
-            agent.stoppingDistance = 10;
+            agent.stoppingDistance = AttackStopDistance;
             agent.SetDestination(tile.transform.position);
             yield return null;
             animator.SetBool("Walking", true);

@@ -9,6 +9,8 @@ public class Pawn : Pieces
     
     public override int Value => 10;
 
+    private const float AttackStopDistance = 5;
+
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
     {
         var (x, y) = Loc;
@@ -47,7 +49,7 @@ public class Pawn : Pieces
         hasMoved = true;
         if (tile.piece != null && tile.piece.team != team)
         {
-            agent.stoppingDistance = 5;
+            agent.stoppingDistance = AttackStopDistance;
             agent.SetDestination(tile.transform.position);
             yield return null;
             animator.SetBool("Walking", true);
