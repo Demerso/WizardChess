@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class BishopAnimationHelper : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool _attackHasHit = false;
+
+    public bool AttackHasHit
     {
-        
+        get
+        {
+            if (!_attackHasHit)
+                return false;
+            _attackHasHit = false;
+            return true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AttackHit()
     {
-        
+        _attackHasHit = true;
     }
 }

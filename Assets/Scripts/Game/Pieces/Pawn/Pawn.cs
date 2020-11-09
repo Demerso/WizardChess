@@ -55,6 +55,7 @@ public class Pawn : Pieces
             animator.SetTrigger("Attack");
             yield return new WaitUntil(() => animationHelper.AttackHasHit);
             StartCoroutine(tile.piece.Die());
+            yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"));
         }
         agent.stoppingDistance = 0;
         agent.SetDestination(tile.transform.position);

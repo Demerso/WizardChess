@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class Bishop : Pieces
 {
+
+    [SerializeField] private BishopAnimationHelper animationHelper;
+    
     public override int Value => 30;
 
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
@@ -72,16 +75,23 @@ public class Bishop : Pieces
 
     protected override IEnumerator _move(UnityEvent finished, Tile tile)
     {
-        // TODO: Make for bishop
         hasMoved = true;
-        agent.SetDestination(tile.transform.position);
-        animator.SetBool("Walking", true);
-        yield return null;
         if (tile.piece != null && tile.piece.team != team)
         {
+            agent.stoppingDistance = 10;
+            agent.SetDestination(tile.transform.position);
+            yield return null;
+            animator.SetBool("Walking", true);
+            yield return new WaitUntil(_notMoving);
+            animator.SetTrigger("Attack");
+            yield return new WaitUntil(() => animationHelper.AttackHasHit);
             StartCoroutine(tile.piece.Die());
+            yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"));
         }
-        
+        agent.stoppingDistance = 0;
+        agent.SetDestination(tile.transform.position);
+        yield return null;
+        animator.SetBool("Walking", true);
         Loc = tile.Location;
         tile.piece = this;
         yield return new WaitUntil(_notMoving);
