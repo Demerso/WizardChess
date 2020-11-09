@@ -66,6 +66,7 @@ public class Board : MonoBehaviour
             InitPiece(pieceSet.rook, 7, j, team);
             team = Game.Team.Dark;
         }
+        
         for (var i = 0; i < 8; i++)
         {
             InitPiece(pieceSet.pawn, i, 1, Game.Team.Light);
