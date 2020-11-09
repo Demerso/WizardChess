@@ -8,6 +8,7 @@ public abstract class Pieces : MonoBehaviour
 {
     [SerializeField] private Outline outline;
     [SerializeField] protected Animator animator;
+    [SerializeField] protected NavMeshAgent agent;
 
     public (int, int) Loc;
     public Game game;
@@ -16,16 +17,16 @@ public abstract class Pieces : MonoBehaviour
     
     private Collider[] _colliders;
     private Rigidbody[] _rigidbodies;
-    private NavMeshAgent _agent;
     public abstract int Value { get; }
 
     protected UnityEvent ActionFinished;
+    
     private Quaternion _defaultDirection;
     
     
     private void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         _colliders = GetComponentsInChildren<Collider>();
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
         _defaultDirection = team == Game.Team.Light? 
@@ -47,31 +48,13 @@ public abstract class Pieces : MonoBehaviour
         return ActionFinished;
     }
 
-    public abstract void Die();
+    public abstract IEnumerator Die();
 
-    private IEnumerator _move(UnityEvent finished, Tile tile)
+    protected abstract IEnumerator _move(UnityEvent finished, Tile tile);
+
+    protected bool _notMoving()
     {
-        hasMoved = true;
-        _agent.SetDestination(tile.transform.position);
-        animator.SetBool("Walking", true);
-        yield return null;
-        if (tile.piece != null && tile.piece.team != team)
-        {
-            tile.piece.Die();
-            //Attack();
-        }
-        
-        Loc = tile.Location;
-        tile.piece = this;
-        yield return new WaitUntil(_notMoving);
-        animator.SetBool("Walking", false);
-        finished.Invoke();
-        StartCoroutine(ResetRotation());
-    }
-    
-    private bool _notMoving()
-    {
-        return _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance < 0.1f;
+        return agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance < 0.1f;
     }
 
     public void SetTeam(Game.Team t)
@@ -88,7 +71,7 @@ public abstract class Pieces : MonoBehaviour
     
     protected void SetRagdoll(bool ragdoll)
     {
-        _agent.enabled = !ragdoll;
+        agent.enabled = !ragdoll;
         foreach (var coll in _colliders)
         {
             coll.isTrigger = !ragdoll;
@@ -103,7 +86,7 @@ public abstract class Pieces : MonoBehaviour
 
     public abstract void SetSelected(bool selected);
 
-    private IEnumerator ResetRotation()
+    protected IEnumerator ResetRotation()
     {
         while (Mathf.Abs(Quaternion.Angle(transform.rotation, _defaultDirection)) > 0.5f)
         {

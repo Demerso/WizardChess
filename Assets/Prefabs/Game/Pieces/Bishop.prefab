@@ -309,6 +309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: -4802562067739055921}
   animator: {fileID: 5506363747854431930}
+  agent: {fileID: 3317007608152708480}
+  game: {fileID: 0}
   team: 0
   hasMoved: 0
 --- !u!114 &-4802562067739055921

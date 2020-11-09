@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class Rook : Pieces
@@ -62,9 +64,31 @@ public class Rook : Pieces
         return ActionFinished;
     }
 
-    public override void Die()
+    public override IEnumerator Die()
     {
         SetRagdoll(true);
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+    }
+
+    protected override IEnumerator _move(UnityEvent finished, Tile tile)
+    {
+        // TODO: Make for rook
+        hasMoved = true;
+        agent.SetDestination(tile.transform.position);
+        animator.SetBool("Walking", true);
+        yield return null;
+        if (tile.piece != null && tile.piece.team != team)
+        {
+            StartCoroutine(tile.piece.Die());
+        }
+        
+        Loc = tile.Location;
+        tile.piece = this;
+        yield return new WaitUntil(_notMoving);
+        animator.SetBool("Walking", false);
+        finished.Invoke();
+        StartCoroutine(ResetRotation());
     }
 
     public override void SetSelected(bool selected)

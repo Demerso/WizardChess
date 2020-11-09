@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class Pawn : Pieces
 {
-
+    [SerializeField] private PawnAnimationHelper animationHelper;
+    
     public override int Value => 10;
 
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
@@ -32,9 +35,34 @@ public class Pawn : Pieces
         return ActionFinished;
     }
 
-    public override void Die()
+    public override IEnumerator Die()
     {
         SetRagdoll(true);
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+    }
+
+    protected override IEnumerator _move(UnityEvent finished, Tile tile)
+    {
+        hasMoved = true;
+        if (tile.piece != null && tile.piece.team != team)
+        {
+            agent.stoppingDistance = 1;
+            agent.SetDestination(tile.transform.position);
+            animator.SetBool("Walking", true);
+            animator.SetTrigger("Attack");
+            yield return new WaitUntil(() => animationHelper.AttackHasHit);
+            StartCoroutine(tile.piece.Die());
+        }
+        agent.stoppingDistance = 0;
+        agent.SetDestination(tile.transform.position);
+        animator.SetBool("Walking", true);
+        Loc = tile.Location;
+        tile.piece = this;
+        yield return new WaitUntil(_notMoving);
+        animator.SetBool("Walking", false);
+        finished.Invoke();
+        StartCoroutine(ResetRotation());
     }
 
     public override void SetSelected(bool selected)
