@@ -68,7 +68,7 @@ public class Pawn : Pieces
         yield return new WaitUntil(_notMoving);
         animator.SetBool("Walking", false);
         finished.Invoke();
-        StartCoroutine(ResetRotation());
+        StartCoroutine(SetRotation(DefaultDirection));
     }
 
     public override void SetSelected(bool selected)

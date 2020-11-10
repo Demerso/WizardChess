@@ -21,7 +21,7 @@ public abstract class Pieces : MonoBehaviour
 
     protected UnityEvent ActionFinished;
     
-    private Quaternion _defaultDirection;
+    protected Quaternion DefaultDirection;
     
     
     private void Start()
@@ -29,10 +29,10 @@ public abstract class Pieces : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         _colliders = GetComponentsInChildren<Collider>();
         _rigidbodies = GetComponentsInChildren<Rigidbody>();
-        _defaultDirection = team == Game.Team.Light? 
+        DefaultDirection = team == Game.Team.Light? 
             new Quaternion(0,0,0,1) : 
             new Quaternion(0,1,0,0);
-        transform.rotation = _defaultDirection;
+        transform.rotation = DefaultDirection;
         SetRagdoll(false);
     }
 
@@ -87,13 +87,13 @@ public abstract class Pieces : MonoBehaviour
 
     public abstract void SetSelected(bool selected);
 
-    protected IEnumerator ResetRotation()
+    protected IEnumerator SetRotation(Quaternion rot)
     {
-        while (Mathf.Abs(Quaternion.Angle(transform.rotation, _defaultDirection)) > 0.5f)
+        while (Mathf.Abs(Quaternion.Angle(transform.rotation, rot)) > 0.5f)
         {
             transform.rotation = Quaternion.Slerp(
                 transform.rotation, 
-                _defaultDirection, 
+                rot, 
                 0.1f);
             yield return null;
         }

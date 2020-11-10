@@ -5,6 +5,11 @@ using UnityEngine.Events;
 
 public class Queen : Pieces
 {
+    [SerializeField] private QueenAnimationHelper animationHelper;
+    [SerializeField] private GameObject explosion;
+
+    private const float AttackDuration = 1.9f;
+    
     public override int Value => 90;
 
     public override IEnumerable<(int, int)> GetMoves(Tile[,] tiles)
@@ -117,22 +122,31 @@ public class Queen : Pieces
 
     protected override IEnumerator _move(UnityEvent finished, Tile tile)
     {
-        // TODO: Make for queen
         hasMoved = true;
+        if (tile.piece != null && tile.piece.team != team)
+        {
+            var dir = tile.piece.transform.position - transform.position;
+            var toRotation = Quaternion.LookRotation(dir, Vector3.up);
+            StartCoroutine(SetRotation(toRotation));
+            yield return new WaitUntil(()=>Mathf.Abs(Quaternion.Angle(
+                transform.rotation, toRotation)) < 0.5f);
+            animator.SetTrigger("Attack");
+            yield return new WaitUntil(() => animationHelper.ShouldCastAttack);
+            var exp = Instantiate(explosion, 
+                tile.transform.position + Vector3.up * 3f, Quaternion.identity);
+            StartCoroutine(tile.piece.Die());
+            yield return new WaitForSeconds(AttackDuration);
+            Destroy(exp);
+        }
+        Loc = tile.Location;
+        tile.piece = this;
         agent.SetDestination(tile.transform.position);
         animator.SetBool("Walking", true);
         yield return null;
-        if (tile.piece != null && tile.piece.team != team)
-        {
-            StartCoroutine(tile.piece.Die());
-        }
-        
-        Loc = tile.Location;
-        tile.piece = this;
         yield return new WaitUntil(_notMoving);
         animator.SetBool("Walking", false);
         finished.Invoke();
-        StartCoroutine(ResetRotation());
+        StartCoroutine(SetRotation(DefaultDirection));
     }
 
     public override void SetSelected(bool selected)
