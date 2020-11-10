@@ -26,6 +26,7 @@ public class Board : MonoBehaviour
         _boardCorner = transform.position;
         InitTiles();
         InitPieces();
+        
     }
 
     private void InitTiles()
@@ -66,13 +67,13 @@ public class Board : MonoBehaviour
             InitPiece(pieceSet.rook, 7, j, team);
             team = Game.Team.Dark;
         }
-        /*
+        
         for (var i = 0; i < 8; i++)
         {
             InitPiece(pieceSet.pawn, i, 1, Game.Team.Light);
             InitPiece(pieceSet.pawn, i, 6, Game.Team.Dark);
         }
-        */
+        
     }
 
     private void InitPiece(GameObject obj, int x, int y, Game.Team team)

@@ -244,6 +244,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8754641134155740895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831021346288096147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de751a3095ae2845a3fd8b9f8a3d6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3317007608152708494
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +315,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 10
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -333,6 +345,8 @@ MonoBehaviour:
   game: {fileID: 0}
   team: 0
   hasMoved: 0
+  animationHelper: {fileID: 8754641134155740895}
+  explosion: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3, type: 3}
 --- !u!114 &-6416941145035848594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,9 +1242,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
---- !u!1 &3733509617541848443 stripped
+--- !u!1 &2831021346288096147 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -7469026412346215495, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6438555720619616156 stripped
@@ -1238,14 +1252,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8273956300578523486, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1366569356880233522 stripped
+--- !u!1 &5889514787531163155 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -5080165188405679376, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
+  m_CorrespondingSourceObject: {fileID: -417878991522404143, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2831021346288096147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
+--- !u!4 &3171130377305360681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651640550507501354 stripped
@@ -1253,9 +1267,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -4799876848884336152, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &3171130377305360681 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
+--- !u!1 &1366569356880233522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5080165188405679376, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7696499669124252327 stripped
@@ -1278,9 +1292,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2123234437176646832, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5889514787531163155 stripped
+--- !u!1 &3733509617541848443 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -417878991522404143, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
+  m_CorrespondingSourceObject: {fileID: -7469026412346215495, guid: e0cf6a6e6c8a0a444b05f17d552b15b0, type: 3}
   m_PrefabInstance: {fileID: 3136941015076826818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3534117744820471825 stripped
