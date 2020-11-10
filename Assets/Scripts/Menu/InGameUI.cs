@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class InGameUI : MonoBehaviour
 {
 
     [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject escPanel;
 
+    [SerializeField] private Slider speedSlider;
+    [SerializeField] private Slider volumeSlider;
+    
     private const float FadeInDuration = 1f;
 
     public bool open;
@@ -19,6 +24,18 @@ public class InGameUI : MonoBehaviour
         open = false;
         winPanel.SetActive(false);
         winPanel.GetComponent<CanvasGroup>().alpha = 0;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !open && !escPanel.activeSelf)
+        {
+            open = true;
+            var canvasGroup = escPanel.GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 0;
+            escPanel.SetActive(true);
+            StartCoroutine(_fadePanel(canvasGroup, canvasGroup.alpha, 1));
+        }
     }
 
     public void OpenWinPanel(string winingTeam)
@@ -34,6 +51,23 @@ public class InGameUI : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("MenuScene");
+    }
+
+    public void CloseEscPanel()
+    {
+        if (!open || !escPanel.activeSelf) return;
+        open = false;
+        escPanel.SetActive(false);
+    }
+
+    public void OnSpeedChange()
+    {
+        Time.timeScale = speedSlider.value / 10;
+    }
+
+    public void OnVolumeChange()
+    {
+        AudioListener.volume = volumeSlider.value;
     }
 
     private IEnumerator _fadePanel(CanvasGroup panel, float start, float end)
