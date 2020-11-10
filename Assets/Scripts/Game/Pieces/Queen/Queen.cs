@@ -137,6 +137,6 @@ public class Queen : Pieces
 
     public override void SetSelected(bool selected)
     {
-        animator.SetTrigger("Selected");
+        if (selected) animator.SetTrigger("Selected");
     }
 }
