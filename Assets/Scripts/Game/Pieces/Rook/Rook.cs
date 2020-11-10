@@ -85,6 +85,10 @@ public class Rook : Pieces
             yield return null;
             animator.SetBool("Walking", true);
             yield return new WaitUntil(_notMoving);
+            var dir = tile.piece.transform.position - transform.position;
+            var toRotation = Quaternion.LookRotation(dir, Vector3.up);
+            StartCoroutine(SetRotation(toRotation));
+            yield return new WaitUntil(() => IsRotated(toRotation));
             animator.SetTrigger("Attack");
             yield return new WaitUntil(() => animationHelper.AttackHasHit);
             StartCoroutine(tile.piece.Die());

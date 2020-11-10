@@ -89,7 +89,7 @@ public abstract class Pieces : MonoBehaviour
 
     protected IEnumerator SetRotation(Quaternion rot)
     {
-        while (Mathf.Abs(Quaternion.Angle(transform.rotation, rot)) > 0.5f)
+        while (!IsRotated(rot))
         {
             transform.rotation = Quaternion.Slerp(
                 transform.rotation, 
@@ -97,6 +97,11 @@ public abstract class Pieces : MonoBehaviour
                 0.1f);
             yield return null;
         }
+    }
+
+    protected bool IsRotated(Quaternion angle)
+    {
+        return Mathf.Abs(Quaternion.Angle(transform.rotation, angle)) < 0.5f;
     }
 
     public void Win()

@@ -128,8 +128,7 @@ public class Queen : Pieces
             var dir = tile.piece.transform.position - transform.position;
             var toRotation = Quaternion.LookRotation(dir, Vector3.up);
             StartCoroutine(SetRotation(toRotation));
-            yield return new WaitUntil(()=>Mathf.Abs(Quaternion.Angle(
-                transform.rotation, toRotation)) < 0.5f);
+            yield return new WaitUntil(() => IsRotated(toRotation));
             animator.SetTrigger("Attack");
             yield return new WaitUntil(() => animationHelper.ShouldCastAttack);
             var exp = Instantiate(explosion, 
