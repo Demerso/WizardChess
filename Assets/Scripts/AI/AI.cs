@@ -5,6 +5,7 @@ public abstract class AI
 {
     protected readonly Board Board;
     protected readonly Game Game;
+    
 
     protected AI() {}
     
@@ -23,4 +24,5 @@ public abstract class AI
     }
     
     public abstract IEnumerator SelectMove(Action<(Pieces, int, int)> action);
+    
 }

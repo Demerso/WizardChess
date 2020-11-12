@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class Rando : AI
@@ -10,6 +11,7 @@ public class Rando : AI
     
     public override IEnumerator SelectMove(Action<(Pieces, int, int)> action)
     {
+        yield return new WaitWhile(() => Game.UIIsOpen);
         var possibleMoves = new List<(Pieces, int, int)>();
 
         foreach (var tile in Board.Tiles)

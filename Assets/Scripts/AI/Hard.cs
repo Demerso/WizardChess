@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using Random = UnityEngine.Random;
 
 public class Hard : AI
 {
@@ -16,9 +16,9 @@ public class Hard : AI
     
     public override IEnumerator SelectMove(Action<(Pieces, int, int)> action)
     {
+        yield return new WaitWhile(() => Game.UIIsOpen);
         var bestScore = int.MinValue;
-        Pieces bestPiece = null;
-        var bestMove = (0, 0);
+        var goodMoves = new List<(int, (int, int), Pieces)>();
         foreach (var tile in Board.Tiles)
         {
             if (tile.piece == null || tile.piece.team != Game.currTeam) continue;
@@ -28,17 +28,14 @@ public class Hard : AI
                 Forward(piece, move);
                 var value = Minimax(3, int.MinValue, int.MaxValue, false);
                 Reverse(piece, move);
-                if (value >= bestScore)
-                {
-                    bestPiece = piece;
-                    bestScore = value;
-                    bestMove = move;
-                }
+                goodMoves.Add((value, move, piece));
+                if (value >= bestScore) bestScore = value;
                 yield return null;
-            }    
+            }
         }
-        var (x, y) = bestMove;
-        action((bestPiece, x, y));
+        goodMoves = goodMoves.FindAll(((int val, (int, int), Pieces) move) => move.val >= bestScore);
+        var (_, (x, y), pieces) = goodMoves[Random.Range(0, goodMoves.Count-1)];
+        action((pieces, x, y));
     }
 
     private int Minimax(int depth, int alpha, int beta, bool isMax)
