@@ -113,6 +113,7 @@ public class Board : MonoBehaviour
         switch (tile.state)
         {
             case Tile.State.Hidden:
+                SoundPlayer.sp.Play("Click");
                 if (_selected != null && _selected.piece != null)
                     _selected.piece.SetSelected(false);
                 _selected = tile;
@@ -125,6 +126,7 @@ public class Board : MonoBehaviour
                 }
                 break;
             case Tile.State.Active:
+                SoundPlayer.sp.Play("Click");
                 _selected.piece.SetSelected(false);
                 _selected.piece.Move(tile).AddListener(game.EndTurn);
 

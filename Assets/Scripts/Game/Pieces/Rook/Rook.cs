@@ -70,6 +70,7 @@ public class Rook : Pieces
 
     public override IEnumerator Die()
     {
+        SoundPlayer.sp.Play("RookDie");
         SetRagdoll(true);
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);

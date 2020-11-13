@@ -39,6 +39,8 @@ public class Knight : Pieces
 
     public override IEnumerator Die()
     {
+        SoundPlayer.sp.Play("KnightDie");
+
         SetRagdoll(true);
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);

@@ -70,6 +70,7 @@ public class Bishop : Pieces
 
     public override IEnumerator Die()
     {
+        SoundPlayer.sp.Play("BishopDie");
         SetRagdoll(true);
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);

@@ -18,6 +18,7 @@ public class KingAnimationHelper : MonoBehaviour
 
     public void CastAttack()
     {
+        SoundPlayer.sp.Play("KingAttack");
         _castAttack = true;
     }
 }

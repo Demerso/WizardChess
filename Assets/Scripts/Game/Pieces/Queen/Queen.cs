@@ -115,6 +115,7 @@ public class Queen : Pieces
 
     public override IEnumerator Die()
     {
+        SoundPlayer.sp.Play("QueenDie");
         SetRagdoll(true);
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);

@@ -18,6 +18,8 @@ public class QueenAnimationHelper : MonoBehaviour
 
     public void CastAttack()
     {
+        SoundPlayer.sp.Play("QueenAttack");
+
         _castAttack = true;
     }
     

@@ -19,6 +19,7 @@ public class KnightAnimationHelper : MonoBehaviour
 
     public void AttackHit()
     {
+        SoundPlayer.sp.Play("KnightAttack");
         _attackHasHit = true;
     }
 }

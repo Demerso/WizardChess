@@ -20,6 +20,7 @@ public class PawnAnimationHelper : MonoBehaviour
 
     public void AttackHit()
     {
+        SoundPlayer.sp.Play("Kick");
         _attackHasHit = true;
     }
 }

@@ -19,6 +19,7 @@ public class BishopAnimationHelper : MonoBehaviour
 
     public void AttackHit()
     {
+        SoundPlayer.sp.Play("Kick");
         _attackHasHit = true;
     }
 }

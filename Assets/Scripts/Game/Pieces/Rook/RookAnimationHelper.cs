@@ -17,6 +17,7 @@ public class RookAnimationHelper : MonoBehaviour
 
     public void AttackHit()
     {
+        SoundPlayer.sp.Play("RooksAttack");
         _attackHasHit = true;
     }
 }

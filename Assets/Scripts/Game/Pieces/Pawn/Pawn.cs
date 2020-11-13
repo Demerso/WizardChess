@@ -39,6 +39,7 @@ public class Pawn : Pieces
 
     public override IEnumerator Die()
     {
+        SoundPlayer.sp.Play("PawnDie");
         SetRagdoll(true);
         yield return new WaitForSeconds(2);
         gameObject.SetActive(false);

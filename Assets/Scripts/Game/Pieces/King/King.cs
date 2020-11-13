@@ -38,6 +38,7 @@ public class King : Pieces
 
     public override IEnumerator Die()
     {
+        SoundPlayer.sp.Play("KingDie");
         SetRagdoll(true);
         game.KingDied(team);
         yield return new WaitForSeconds(2);

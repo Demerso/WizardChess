@@ -68,6 +68,7 @@ public class InGameUI : MonoBehaviour
     public void OnVolumeChange()
     {
         AudioListener.volume = volumeSlider.value;
+        
     }
 
     private IEnumerator _fadePanel(CanvasGroup panel, float start, float end)
