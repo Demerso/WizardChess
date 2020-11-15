@@ -15,6 +15,10 @@ public class Menu : MonoBehaviour
         GameSettings.Player2 = GetPlayerType(player2Dropdown.value);
         SceneManager.LoadScene("GameScene");
     }
+    
+    public void QuitGame() {
+        Application.Quit();
+    }
 
     private static GameSettings.PlayerType GetPlayerType(int value)
     {
